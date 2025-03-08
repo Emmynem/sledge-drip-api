@@ -5,8 +5,8 @@ import { product_rules } from "../rules/products.rules.js";
 import { user_rules } from "../rules/users.rules.js";
 import { default_rules } from "../rules/default.rules.js";
 import {
-	getRating, getRatings, getRatingsSpecifically, rootGetRating, rootGetRatings, rootGetRatingsSpecifically, addExternalRating, addRating, 
-	deleteRating, deleteRatingImage, uploadRatingImages
+	getRating, getRatings, getRatingsSpecifically, rootGetRating, rootGetRatings, rootGetRatingsSpecifically, addExternalRating, addRating,
+	deleteRating, deleteRatingImage, uploadRatingImages, addMultipleRatings, publicGetRatingsSpecifically, publicGetRatingStatsSpecifically
 } from "../controllers/ratings.controller.js";
 
 export default function (app) {
@@ -19,15 +19,21 @@ export default function (app) {
 	app.get("/ratings/via/product", [product_rules.forFindingProductAlt], rootGetRatingsSpecifically);
 	app.get("/ratings/via/order", [order_rules.forFindingOrderAlt], rootGetRatingsSpecifically);
 	app.get("/rating", [rating_rules.forFindingRating], rootGetRating);
-	
+
+	app.get("/home/ratings/via/product", [product_rules.forFindingProductAlt], publicGetRatingsSpecifically);
+	app.get("/home/ratings/via/order", [order_rules.forFindingOrderAlt], publicGetRatingsSpecifically);
+	app.get("/home/rating/stats/via/product", [product_rules.forFindingProductAlt], publicGetRatingStatsSpecifically);
+	app.get("/home/rating/stats/via/order", [order_rules.forFindingOrderAlt], publicGetRatingStatsSpecifically);
+
 	app.get("/user/ratings", [checks.verifyToken, checks.isUser], getRatings);
 	app.get("/user/ratings/via/product", [checks.verifyToken, checks.isUser, product_rules.forFindingProductAlt], getRatingsSpecifically);
 	app.get("/user/ratings/via/order", [checks.verifyToken, checks.isUser, order_rules.forFindingOrderAlt], getRatingsSpecifically);
 	app.get("/user/rating", [checks.verifyToken, checks.isUser, rating_rules.forFindingRating], getRating);
 
+	app.post("/add/multiple/ratings", [product_rules.forFindingProductAlt, rating_rules.forAddingMultipleRatings], addMultipleRatings);
 	app.post("/add/update/rating", [product_rules.forFindingProductAlt, order_rules.forFindingOrderAlt, rating_rules.forAddingAndUpdating], addExternalRating);
 	app.post("/add/rating/images", [rating_rules.forFindingRatingAlt, rating_rules.forAddingMultipleRatingImages], uploadRatingImages);
-	
+
 	app.post("/user/add/update/rating", [checks.verifyToken, checks.isUser, product_rules.forFindingProductAlt, order_rules.forFindingOrderAlt, rating_rules.forAddingAndUpdating], addRating);
 	app.post("/user/add/rating/images", [checks.verifyToken, checks.isUser, rating_rules.forFindingRatingAlt, rating_rules.forAddingMultipleRatingImages], uploadRatingImages);
 
