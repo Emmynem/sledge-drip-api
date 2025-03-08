@@ -66,6 +66,11 @@ export const rating_rules = {
 			})
 	],
 	forAddingAndUpdating: [
+		check('fullname')
+			.optional({ checkFalsy: false })
+			.bail()
+			.isString().isLength({ min: 3, max: 150 })
+			.withMessage("Invalid length (3 - 150) characters"),
 		check('rating', "Rating is required")
 			.exists({ checkNull: true, checkFalsy: true })
 			.bail()
@@ -76,12 +81,19 @@ export const rating_rules = {
 			.bail()
 			.isLength({ min: 3, max: 3000 })
 			.withMessage(`Invalid length (3 - ${3000}) characters`),
-	], 
+	],
 	forAddingMultipleRatingImages: [
 		check('rating_images', "Rating Images are required")
 			.exists({ checkNull: true, checkFalsy: true })
 			.bail()
 			.isArray({ min: 1 })
 			.withMessage("Must be an array of objects of images uploaded (not empty)"),
+	],
+	forAddingMultipleRatings: [
+		check('ratings', "Ratings are required")
+			.exists({ checkNull: true, checkFalsy: true })
+			.bail()
+			.isArray({ min: 1 })
+			.withMessage("Must be an array of objects of ratings with values - fullname, rating and description (not empty)"),
 	],
 };  

@@ -45,6 +45,10 @@ export default (sequelize, Sequelize) => {
 				key: "unique_id"
 			}
 		},
+		fullname: {
+			type: Sequelize.STRING(150),
+			allowNull: true,
+		},
 		rating: {
 			type: Sequelize.INTEGER(1),
 			allowNull: false,
