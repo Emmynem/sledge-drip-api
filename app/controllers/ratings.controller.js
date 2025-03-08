@@ -44,7 +44,7 @@ export async function rootGetRatings(req, res) {
 				include: [
 					{
 						model: PRODUCTS,
-						attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+						attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 						include: [
 							{
 								model: PRODUCT_IMAGES,
@@ -60,7 +60,7 @@ export async function rootGetRatings(req, res) {
 			},
 			{
 				model: PRODUCTS,
-				attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+				attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 				include: [
 					{
 						model: PRODUCT_IMAGES,
@@ -114,7 +114,7 @@ export function rootGetRating(req, res) {
 					include: [
 						{
 							model: PRODUCTS,
-							attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+							attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 							include: [
 								{
 									model: PRODUCT_IMAGES,
@@ -130,7 +130,7 @@ export function rootGetRating(req, res) {
 				},
 				{
 					model: PRODUCTS,
-					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+					attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 					include: [
 						{
 							model: PRODUCT_IMAGES,
@@ -190,7 +190,7 @@ export async function rootGetRatingsSpecifically(req, res) {
 					include: [
 						{
 							model: PRODUCTS,
-							attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+							attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 							include: [
 								{
 									model: PRODUCT_IMAGES,
@@ -206,7 +206,7 @@ export async function rootGetRatingsSpecifically(req, res) {
 				},
 				{
 					model: PRODUCTS,
-					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+					attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 					include: [
 						{
 							model: PRODUCT_IMAGES,
@@ -261,7 +261,7 @@ export async function getRatings(req, res) {
 				include: [
 					{
 						model: PRODUCTS,
-						attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+						attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 						include: [
 							{
 								model: PRODUCT_IMAGES,
@@ -277,7 +277,7 @@ export async function getRatings(req, res) {
 			},
 			{
 				model: PRODUCTS,
-				attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+				attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 				include: [
 					{
 						model: PRODUCT_IMAGES,
@@ -338,7 +338,7 @@ export async function getRatingsSpecifically(req, res) {
 					include: [
 						{
 							model: PRODUCTS,
-							attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+							attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 							include: [
 								{
 									model: PRODUCT_IMAGES,
@@ -354,7 +354,7 @@ export async function getRatingsSpecifically(req, res) {
 				},
 				{
 					model: PRODUCTS,
-					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+					attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 					include: [
 						{
 							model: PRODUCT_IMAGES,
@@ -407,7 +407,7 @@ export function getRating(req, res) {
 					include: [
 						{
 							model: PRODUCTS,
-							attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+							attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 							include: [
 								{
 									model: PRODUCT_IMAGES,
@@ -423,7 +423,7 @@ export function getRating(req, res) {
 				},
 				{
 					model: PRODUCTS,
-					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+					attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
 					include: [
 						{
 							model: PRODUCT_IMAGES,
@@ -465,7 +465,7 @@ export async function publicGetRatingsSpecifically(req, res) {
 		const sortBy = return_all_letters_uppercase(req.query.sortBy) || return_all_letters_uppercase(req.body.sortBy) || "DESC";
 
 		RATINGS.findAndCountAll({
-			attributes: { exclude: ['id', 'user_unique_id', 'createdAt', 'updatedAt'] },
+			attributes: { exclude: ['id', 'user_unique_id', 'updatedAt'] },
 			where: {
 				...payload,
 			},
@@ -473,40 +473,40 @@ export async function publicGetRatingsSpecifically(req, res) {
 				[orderBy, sortBy]
 			],
 			include: [
-				{
-					model: ORDERS,
-					attributes: ['unique_id', 'tracking_number', 'contact_fullname', 'contact_email', 'shipping_firstname', 'shipping_lastname', 'shipping_address', 'shipping_state', 'shipping_city', 'shipping_zip_code', 'billing_firstname', 'billing_lastname', 'billing_address', 'billing_state', 'billing_city', 'billing_zip_code', 'quantity', 'amount', 'shipping_fee', 'gateway', 'payment_method', 'paid', 'shipped', 'disputed', 'delivery_status', 'createdAt', 'updatedAt'],
-					include: [
-						{
-							model: PRODUCTS,
-							attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
-							include: [
-								{
-									model: PRODUCT_IMAGES,
-									attributes: ['image']
-								},
-								{
-									model: CATEGORIES,
-									attributes: ['name', 'image', 'stripped']
-								},
-							]
-						},
-					]
-				},
-				{
-					model: PRODUCTS,
-					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
-					include: [
-						{
-							model: PRODUCT_IMAGES,
-							attributes: ['image']
-						},
-						{
-							model: CATEGORIES,
-							attributes: ['name', 'image', 'stripped']
-						},
-					]
-				},
+				// {
+				// 	model: ORDERS,
+				// 	attributes: ['unique_id', 'tracking_number', 'contact_fullname', 'contact_email', 'shipping_firstname', 'shipping_lastname', 'shipping_address', 'shipping_state', 'shipping_city', 'shipping_zip_code', 'billing_firstname', 'billing_lastname', 'billing_address', 'billing_state', 'billing_city', 'billing_zip_code', 'quantity', 'amount', 'shipping_fee', 'gateway', 'payment_method', 'paid', 'shipped', 'disputed', 'delivery_status', 'createdAt', 'updatedAt'],
+				// 	include: [
+				// 		{
+				// 			model: PRODUCTS,
+				// 			attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+				// 			include: [
+				// 				{
+				// 					model: PRODUCT_IMAGES,
+				// 					attributes: ['image']
+				// 				},
+				// 				{
+				// 					model: CATEGORIES,
+				// 					attributes: ['name', 'image', 'stripped']
+				// 				},
+				// 			]
+				// 		},
+				// 	]
+				// },
+				// {
+				// 	model: PRODUCTS,
+				// 	attributes: ['name', 'stripped', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+				// 	include: [
+				// 		{
+				// 			model: PRODUCT_IMAGES,
+				// 			attributes: ['image']
+				// 		},
+				// 		{
+				// 			model: CATEGORIES,
+				// 			attributes: ['name', 'image', 'stripped']
+				// 		},
+				// 	]
+				// },
 				{
 					model: RATING_IMAGES,
 					attributes: ['unique_id', 'image']
