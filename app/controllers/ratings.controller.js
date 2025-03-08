@@ -2,8 +2,9 @@ import { validationResult, matchedData } from 'express-validator';
 import { v4 as uuidv4 } from 'uuid';
 import dotenv from 'dotenv';
 import { ServerError, SuccessResponse, ValidationError, OtherSuccessResponse, NotFoundError, CreationSuccessResponse, BadRequestError, logger } from '../common/index.js';
-import { 
-	default_delete_status, default_status, tag_root, true_status, false_status, paginate, return_all_letters_uppercase, ratings, anonymous, return_bulk_rating_images_array	
+import {
+	default_delete_status, default_status, tag_root, true_status, false_status, paginate, return_all_letters_uppercase, ratings, anonymous, return_bulk_rating_images_array,
+	return_multiple_rating_array
 } from '../config/config.js';
 import db from "../models/index.js";
 import { deleteImage } from '../middleware/uploads.js';
@@ -56,7 +57,7 @@ export async function rootGetRatings(req, res) {
 						]
 					},
 				]
-			}, 
+			},
 			{
 				model: PRODUCTS,
 				attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
@@ -273,7 +274,7 @@ export async function getRatings(req, res) {
 						]
 					},
 				]
-			}, 
+			},
 			{
 				model: PRODUCTS,
 				attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
@@ -350,7 +351,7 @@ export async function getRatingsSpecifically(req, res) {
 							]
 						},
 					]
-				}, 
+				},
 				{
 					model: PRODUCTS,
 					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
@@ -419,7 +420,7 @@ export function getRating(req, res) {
 							]
 						}
 					]
-				}, 
+				},
 				{
 					model: PRODUCTS,
 					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
@@ -451,6 +452,99 @@ export function getRating(req, res) {
 	}
 };
 
+export async function publicGetRatingsSpecifically(req, res) {
+	const errors = validationResult(req);
+	const payload = matchedData(req);
+
+	if (!errors.isEmpty()) {
+		ValidationError(res, { unique_id: anonymous, text: "Validation Error Occured" }, errors.array())
+	} else {
+		const total_records = await RATINGS.count({ where: { ...payload } });
+		const pagination = paginate(parseInt(req.query.page) || parseInt(req.body.page), parseInt(req.query.size) || parseInt(req.body.size), total_records);
+		const orderBy = req.query.orderBy || req.body.orderBy || "createdAt";
+		const sortBy = return_all_letters_uppercase(req.query.sortBy) || return_all_letters_uppercase(req.body.sortBy) || "DESC";
+
+		RATINGS.findAndCountAll({
+			attributes: { exclude: ['id', 'user_unique_id', 'createdAt', 'updatedAt'] },
+			where: {
+				...payload,
+			},
+			order: [
+				[orderBy, sortBy]
+			],
+			include: [
+				{
+					model: ORDERS,
+					attributes: ['unique_id', 'tracking_number', 'contact_fullname', 'contact_email', 'shipping_firstname', 'shipping_lastname', 'shipping_address', 'shipping_state', 'shipping_city', 'shipping_zip_code', 'billing_firstname', 'billing_lastname', 'billing_address', 'billing_state', 'billing_city', 'billing_zip_code', 'quantity', 'amount', 'shipping_fee', 'gateway', 'payment_method', 'paid', 'shipped', 'disputed', 'delivery_status', 'createdAt', 'updatedAt'],
+					include: [
+						{
+							model: PRODUCTS,
+							attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+							include: [
+								{
+									model: PRODUCT_IMAGES,
+									attributes: ['image']
+								},
+								{
+									model: CATEGORIES,
+									attributes: ['name', 'image', 'stripped']
+								},
+							]
+						},
+					]
+				},
+				{
+					model: PRODUCTS,
+					attributes: ['name', 'stripped', 'specification', 'quantity', 'remaining', 'max_quantity', 'price', 'sales_price', 'views', 'favorites'],
+					include: [
+						{
+							model: PRODUCT_IMAGES,
+							attributes: ['image']
+						},
+						{
+							model: CATEGORIES,
+							attributes: ['name', 'image', 'stripped']
+						},
+					]
+				},
+				{
+					model: RATING_IMAGES,
+					attributes: ['unique_id', 'image']
+				},
+			],
+			distinct: true,
+			offset: pagination.start,
+			limit: pagination.limit
+		}).then(ratings => {
+			if (!ratings || ratings.length == 0) {
+				SuccessResponse(res, { unique_id: anonymous, text: "Ratings Not found" }, []);
+			} else {
+				SuccessResponse(res, { unique_id: anonymous, text: "Ratings loaded" }, { ...ratings, pages: pagination.pages });
+			}
+		}).catch(err => {
+			ServerError(res, { unique_id: anonymous, text: err.message }, null);
+		});
+	}
+};
+
+export async function publicGetRatingStatsSpecifically(req, res) {
+	const errors = validationResult(req);
+	const payload = matchedData(req);
+
+	if (!errors.isEmpty()) {
+		ValidationError(res, { unique_id: anonymous, text: "Validation Error Occured" }, errors.array())
+	} else {
+		const total_ratings = await RATINGS.count({ where: { ...payload } });
+		const total_ratings_via_rating = await RATINGS.findAll({
+			attributes: ["rating", [db.sequelize.fn('count', db.sequelize.col('id')), 'total_count']],
+			where: { ...payload },
+			group: "rating"
+		});
+
+		SuccessResponse(res, { unique_id: anonymous, text: "Rating stats loaded" }, { total_ratings, total_ratings_via_rating });
+	}
+};
+
 export async function addRating(req, res) {
 	const user_unique_id = req.USER_UNIQUE_ID;
 
@@ -461,6 +555,13 @@ export async function addRating(req, res) {
 		ValidationError(res, { unique_id: user_unique_id, text: "Validation Error Occured" }, errors.array())
 	} else {
 		try {
+			const order_details = await ORDERS.findOne({
+				where: {
+					unique_id: payload.order_unique_id,
+					status: default_status
+				}
+			});
+
 			const last_rating = await RATINGS.findOne({
 				where: {
 					user_unique_id: user_unique_id,
@@ -474,16 +575,17 @@ export async function addRating(req, res) {
 				await db.sequelize.transaction(async (transaction) => {
 					const rating = await RATINGS.update(
 						{
+							fullname: payload.fullname ? payload.fullname : (order_details ? order_details.contact_fullname : null),
 							...payload,
 							description: payload.description ? payload.description : null
 						}, {
-							where: {
-								unique_id: last_rating.unique_id,
-								user_unique_id,
-								status: default_status
-							},
-							transaction
-						}
+						where: {
+							unique_id: last_rating.unique_id,
+							user_unique_id,
+							status: default_status
+						},
+						transaction
+					}
 					);
 
 					if (rating > 0) {
@@ -500,6 +602,7 @@ export async function addRating(req, res) {
 						{
 							unique_id: rating_unique_id,
 							user_unique_id,
+							fullname: payload.fullname ? payload.fullname : (order_details ? order_details.contact_fullname : null),
 							...payload,
 							description: payload.description ? payload.description : null,
 							status: default_status
@@ -527,6 +630,13 @@ export async function addExternalRating(req, res) {
 		ValidationError(res, { unique_id: anonymous, text: "Validation Error Occured" }, errors.array())
 	} else {
 		try {
+			const order_details = await ORDERS.findOne({
+				where: {
+					unique_id: payload.order_unique_id,
+					status: default_status
+				}
+			});
+
 			const last_rating = await RATINGS.findOne({
 				where: {
 					product_unique_id: payload.product_unique_id,
@@ -539,15 +649,16 @@ export async function addExternalRating(req, res) {
 				await db.sequelize.transaction(async (transaction) => {
 					const rating = await RATINGS.update(
 						{
+							fullname: payload.fullname ? payload.fullname : (order_details ? order_details.contact_fullname : null),
 							...payload,
 							description: payload.description ? payload.description : null
 						}, {
-							where: {
-								unique_id: last_rating.unique_id,
-								status: default_status
-							},
-							transaction
-						}
+						where: {
+							unique_id: last_rating.unique_id,
+							status: default_status
+						},
+						transaction
+					}
 					);
 
 					if (rating > 0) {
@@ -564,6 +675,7 @@ export async function addExternalRating(req, res) {
 						{
 							unique_id: rating_unique_id,
 							user_unique_id: null,
+							fullname: payload.fullname ? payload.fullname : (order_details ? order_details.contact_fullname : null),
 							...payload,
 							description: payload.description ? payload.description : null,
 							status: default_status
@@ -577,6 +689,29 @@ export async function addExternalRating(req, res) {
 					}
 				});
 			}
+		} catch (err) {
+			ServerError(res, { unique_id: anonymous, text: err.message }, null);
+		}
+	}
+};
+
+export async function addMultipleRatings(req, res) {
+	const errors = validationResult(req);
+	const payload = matchedData(req);
+
+	if (!errors.isEmpty()) {
+		ValidationError(res, { unique_id: anonymous, text: "Validation Error Occured" }, errors.array())
+	} else {
+		try {
+			await db.sequelize.transaction(async (transaction) => {
+				const ratings = await RATINGS.bulkCreate(return_multiple_rating_array(payload.ratings, { product_unique_id: payload.product_unique_id }), { transaction });
+
+				if (ratings.length > 0) {
+					SuccessResponse(res, { unique_id: anonymous, text: "Ratings created successfully!" });
+				} else {
+					throw new Error("Error adding ratings");
+				}
+			});
 		} catch (err) {
 			ServerError(res, { unique_id: anonymous, text: err.message }, null);
 		}
