@@ -755,31 +755,23 @@ export const return_bulk_payments_array = (courses, data) => {
 	}
 };
 
-export const return_enrollment_courses_array = (payments, data) => {
+export const return_multiple_rating_array = (ratings, data) => {
 	var results = [];
-	for (let index = 0; index < payments.length; index++) {
-		const element = payments[index];
+	for (let index = 0; index < ratings.length; index++) {
+		const element = ratings[index];
 
 		results.push({
 			unique_id: uuidv4(),
-			user_unique_id: data.user_unique_id,
-			course_unique_id: element.course_unique_id,
-			enrollment_status: ongoing,
+			user_unique_id: null,
+			product_unique_id: data.product_unique_id,
+			order_unique_id: null,
+			fullname: element.fullname,
+			rating: element.rating,
+			description: element.description,
 			status: 1
 		});
 
-		if (index === payments.length - 1) return results;
-	}
-};
-
-export const return_courses_from_payments = (payments, data) => {
-	var results = [];
-	for (let index = 0; index < payments.length; index++) {
-		const element = payments[index];
-
-		results.push(element.course_unique_id);
-
-		if (index === payments.length - 1) return results;
+		if (index === ratings.length - 1) return results;
 	}
 };
 
