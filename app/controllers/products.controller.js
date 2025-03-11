@@ -279,16 +279,16 @@ export async function publicGetProducts(req, res) {
 				model: PRODUCT_IMAGES,
 				attributes: ['image']
 			},
-			{
-				model: RATINGS,
-				attributes: ['rating', 'description'],
-				include: [
-					{
-						model: RATING_IMAGES,
-						attributes: ['image']
-					},
-				]
-			},
+			// {
+			// 	model: RATINGS,
+			// 	attributes: ['rating', 'description'],
+			// 	include: [
+			// 		{
+			// 			model: RATING_IMAGES,
+			// 			attributes: ['image']
+			// 		},
+			// 	]
+			// },
 		], 
 		distinct: true,
 		offset: pagination.start,
@@ -325,16 +325,16 @@ export function publicGetProduct(req, res) {
 					model: PRODUCT_IMAGES,
 					attributes: ['image']
 				},
-				{
-					model: RATINGS,
-					attributes: ['rating', 'description'],
-					include: [
-						{
-							model: RATING_IMAGES,
-							attributes: ['image']
-						},
-					]
-				},
+				// {
+				// 	model: RATINGS,
+				// 	attributes: ['rating', 'description'],
+				// 	include: [
+				// 		{
+				// 			model: RATING_IMAGES,
+				// 			attributes: ['image']
+				// 		},
+				// 	]
+				// },
 			], 
 		}).then(async product => {
 			if (!product) {
@@ -433,16 +433,16 @@ export async function publicSearchProducts(req, res) {
 					model: PRODUCT_IMAGES,
 					attributes: ['image']
 				},
-				{
-					model: RATINGS,
-					attributes: ['rating', 'description'],
-					include: [
-						{
-							model: RATING_IMAGES,
-							attributes: ['image']
-						},
-					]
-				},
+				// {
+				// 	model: RATINGS,
+				// 	attributes: ['rating', 'description'],
+				// 	include: [
+				// 		{
+				// 			model: RATING_IMAGES,
+				// 			attributes: ['image']
+				// 		},
+				// 	]
+				// },
 			], 
 			distinct: true,
 			offset: pagination.start,
@@ -488,16 +488,16 @@ export async function publicGetProductsSpecifically(req, res) {
 					model: PRODUCT_IMAGES,
 					attributes: ['image']
 				},
-				{
-					model: RATINGS,
-					attributes: ['rating', 'description'],
-					include: [
-						{
-							model: RATING_IMAGES,
-							attributes: ['image']
-						},
-					]
-				},
+				// {
+				// 	model: RATINGS,
+				// 	attributes: ['rating', 'description'],
+				// 	include: [
+				// 		{
+				// 			model: RATING_IMAGES,
+				// 			attributes: ['image']
+				// 		},
+				// 	]
+				// },
 			],
 			distinct: true,
 			offset: pagination.start,
