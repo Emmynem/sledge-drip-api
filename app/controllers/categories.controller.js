@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import { ServerError, SuccessResponse, ValidationError, OtherSuccessResponse, NotFoundError, CreationSuccessResponse, BadRequestError, logger } from '../common/index.js';
 import {
 	default_delete_status, default_status, true_status, false_status, paginate, tag_root, email_templates, return_all_letters_uppercase,
-	random_numbers, anonymous, random_uuid, zero, strip_text
+	random_numbers, anonymous, random_uuid, zero, strip_text, return_trimmed_data
 } from '../config/config.js';
 import db from "../models/index.js";
 import { deleteImage } from '../middleware/uploads.js';
@@ -328,7 +328,7 @@ export async function addCategory(req, res) {
 						unique_id: category_unique_id,
 						reference: reference,
 						name: payload.name,
-						stripped: strip_text(payload.name),
+						stripped: strip_text(return_trimmed_data(payload.name)),
 						image: payload.image ? payload.image : null,
 						image_type: payload.image_type ? payload.image_type : null,
 						image_public_id: payload.image_public_id ? payload.image_public_id : null,
@@ -360,7 +360,7 @@ export async function updateCategoryDetails(req, res) {
 				const category = await CATEGORIES.update(
 					{
 						...payload,
-						stripped: strip_text(payload.name),
+						stripped: strip_text(return_trimmed_data(payload.name)),
 					}, {
 						where: {
 							unique_id: payload.unique_id,
