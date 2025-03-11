@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import { ServerError, SuccessResponse, ValidationError, OtherSuccessResponse, NotFoundError, CreationSuccessResponse, BadRequestError, logger } from '../common/index.js';
 import {
 	default_delete_status, default_status, true_status, false_status, paginate, tag_root, email_templates, return_all_letters_uppercase,
-	random_numbers, anonymous, zero, strip_text, return_bulk_product_images_array
+	random_numbers, anonymous, zero, strip_text, return_bulk_product_images_array, return_trimmed_data
 } from '../config/config.js';
 import db from "../models/index.js";
 import { deleteImage } from '../middleware/uploads.js';
@@ -529,7 +529,7 @@ export async function addProduct(req, res) {
 					{
 						unique_id: product_unique_id,
 						...payload,
-						stripped: strip_text(payload.name),
+						stripped: strip_text(return_trimmed_data(payload.name)),
 						remaining: payload.remaining ? payload.remaining : payload.quantity,
 						sales_price: payload.sales_price ? payload.sales_price : zero,
 						views: zero,
@@ -562,7 +562,7 @@ export async function updateProductName(req, res) {
 				const product = await PRODUCTS.update(
 					{
 						...payload,
-						stripped: strip_text(payload.name),
+						stripped: strip_text(return_trimmed_data(payload.name)),
 					}, {
 						where: {
 							unique_id: payload.unique_id,
