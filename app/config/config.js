@@ -502,7 +502,7 @@ export const calculate_distance_price = (distance_pricing, real_time_distance) =
 };
 
 export const strip_text_underscore = (text) => {
-	string = text.replace(/[\s]/g, "_");
+	let string = text.replace(/[\s]/g, "_");
 	return string;
 };
 
@@ -703,6 +703,13 @@ export const validate_app_default_value = (value, data_type) => {
 	else if (data_type === "ARRAY" && Array.isArray(value) && value.length !== 0) return true
 	else if (data_type === "MAP" && typeof value === "object") return true
 	else return false
+};
+
+export const convert_app_default_name = (text) => {
+	let first_convert = return_first_letter_uppercase(unstrip_text(text));
+	let second_convert = strip_text_underscore(first_convert);
+
+	return second_convert;
 };
 
 export const return_all_orders_table = (orders, currency) => {

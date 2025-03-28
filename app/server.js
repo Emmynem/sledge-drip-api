@@ -10,6 +10,7 @@ import db from "./models/index.js";
 import { createApiKeys, createAppDefaults } from './config/default.config.js';
 import authRoutes from "./routes/auth.routes.js";
 // import usersRoutes from "./routes/users.routes.js";
+import appDefaultsRoutes from "./routes/appDefaults.routes.js";
 import transactionsRoutes from "./routes/transactions.routes.js";
 import analyticsRoutes from "./routes/analytics.routes.js";
 import categoriesRoutes from "./routes/categories.routes.js";
@@ -73,7 +74,8 @@ db.sequelize.sync({ alter: false }).then(() => {
 // Binding routes
 authRoutes(app);
 // usersRoutes(app);
-analyticsRoutes(app);;
+appDefaultsRoutes(app);
+analyticsRoutes(app);
 categoriesRoutes(app);
 disputesRoutes(app);
 favoritesRoutes(app);
