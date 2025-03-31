@@ -117,7 +117,7 @@ export const user_order_processing = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Package(s) 📦 are processing 🟡</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> are getting ready to be processed. Please initiate your payment and complete the process to commence shipment.</p>
+				<p style="margin-bottom: 10px;">Your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> are getting ready to be processed. Please initiate your payment and complete the process to commence shipment.</p>
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
 			<div class="container"
@@ -139,18 +139,18 @@ export const user_order_processing = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -182,7 +182,7 @@ export const user_order_processing = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Package(s) 📦 are processing 🟡</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> are getting ready to be processed. Please initiate your payment and complete the process to commence shipment.</p>
+				<p style="margin-bottom: 10px;">Your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> are getting ready to be processed. Please initiate your payment and complete the process to commence shipment.</p>
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
 			<div class="container"
@@ -204,18 +204,18 @@ export const user_order_processing = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -253,7 +253,7 @@ export const user_order_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Payment of ${data.currency} ${data.amount} is due</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the payment page.</p>
+				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the payment page.</p>
 				<a href="${data.coinbase_payment_hosted_url}"
 			style="display: inline-block; background-color: #2A52BE; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 20px 0;">Pay now</a>
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
@@ -277,18 +277,18 @@ export const user_order_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -320,7 +320,7 @@ export const user_order_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Payment of ${data.currency} ${data.amount} is due</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the payment page.</p>
+				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the payment page.</p>
 				<a href="${data.coinbase_payment_hosted_url}"
 			style="display: inline-block; background-color: #2A52BE; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 20px 0;">Pay now</a>
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
@@ -344,18 +344,18 @@ export const user_order_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -393,8 +393,8 @@ export const user_order_wallet_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Payment of ${data.currency} ${data.amount} is due</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the tracking page to complete your payment.</p>
-				<a href="https://computehaven.com/track/${data.tracking_number}"
+				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the tracking page to complete your payment.</p>
+				<a href="https://sledgedrip.com/track/${data.tracking_number}"
 			style="display: inline-block; background-color: #2A52BE; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 20px 0;">Pay now</a>
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -417,18 +417,18 @@ export const user_order_wallet_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -460,8 +460,8 @@ export const user_order_wallet_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Payment of ${data.currency} ${data.amount} is due</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the tracking page to complete your payment.</p>
-				<a href="https://computehaven.com/track/${data.tracking_number}"
+				<p style="margin-bottom: 10px;">Payment for your order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> is due. Click on the button below to go to the tracking page to complete your payment.</p>
+				<a href="https://sledgedrip.com/track/${data.tracking_number}"
 			style="display: inline-block; background-color: #2A52BE; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 20px 0;">Pay now</a>
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -484,18 +484,18 @@ export const user_order_wallet_pay = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -533,7 +533,7 @@ export const user_order_paid = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Payment for your package(s) 📦 has successfully been confirmed 🟢</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Payment for order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been confirmed, we'll update you as
+				<p style="margin-bottom: 10px;">Payment for order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been confirmed, we'll update you as
 			the status of your order(s) changes.</p>
 				<p style="font-size: 13px; font-weight: bold; padding: 10px; background-color: #e9e9e9; border-radius: 5px; display: inline-block;">
 				Amount: ${data.currency} ${data.amount}<br>Payment Method: ${data.payment_method}</p>
@@ -558,18 +558,18 @@ export const user_order_paid = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -601,7 +601,7 @@ export const user_order_paid = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Payment for your package(s) 📦 has successfully been confirmed 🟢</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Payment for order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been confirmed, we'll update you as
+				<p style="margin-bottom: 10px;">Payment for order(s) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been confirmed, we'll update you as
 			the status of your order(s) changes.</p>
 				<p style="font-size: 13px; font-weight: bold; padding: 10px; background-color: #e9e9e9; border-radius: 5px; display: inline-block;">
 				Amount: ${data.currency} ${data.amount}<br>Payment Method: ${data.payment_method}</p>
@@ -626,18 +626,18 @@ export const user_order_paid = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -675,7 +675,7 @@ export const user_orders_cancelled = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your order packages 📦 has been cancelled 🔴</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has been cancelled successfully.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has been cancelled successfully.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -698,18 +698,18 @@ export const user_orders_cancelled = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -741,7 +741,7 @@ export const user_orders_cancelled = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your order packages 📦 has been cancelled 🔴</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has been cancelled successfully.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has been cancelled successfully.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -764,18 +764,18 @@ export const user_orders_cancelled = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -821,7 +821,7 @@ export const user_order_in_transit = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your package(s) 📦 are on their way 🚚</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> are on their way and will be with you soon.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> are on their way and will be with you soon.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -844,18 +844,18 @@ export const user_order_in_transit = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -887,7 +887,7 @@ export const user_order_in_transit = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your package(s) 📦 are on their way 🚚</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> are on their way and will be with you soon.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> are on their way and will be with you soon.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -910,18 +910,18 @@ export const user_order_in_transit = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -959,7 +959,7 @@ export const user_order_shipped = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your package(s) 📦 have arrived at the destination 📍</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has arrived at your destination.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has arrived at your destination.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -982,18 +982,18 @@ export const user_order_shipped = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -1025,7 +1025,7 @@ export const user_order_shipped = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your package(s) 📦 have arrived at the destination 📍</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has arrived at your destination.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has arrived at your destination.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -1048,18 +1048,18 @@ export const user_order_shipped = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -1105,7 +1105,7 @@ export const user_order_completed = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your order(s) 📦 have been completed 🤝</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been completed.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been completed.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -1128,18 +1128,18 @@ export const user_order_completed = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -1171,7 +1171,7 @@ export const user_order_completed = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your order(s) 📦 have been completed 🤝</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been completed.</p>
+				<p style="margin-bottom: 10px;">Your orders with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has successfully been completed.</p>
 				
 				<p style="margin-bottom: 10px;">Summary of your order(s) are shown below;</p>
 			</div>
@@ -1194,18 +1194,18 @@ export const user_order_completed = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -1243,23 +1243,23 @@ export const user_order_refund_dispute = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your order 📦 has been disputed for a refund</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your order (${data.order_unique_id}) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has
+				<p style="margin-bottom: 10px;">Your order (${data.order_unique_id}) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has
 					successfully been disputed for a refund.</p>
 				
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
@@ -1291,23 +1291,23 @@ export const user_order_refund_dispute = (data) => {
 				style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 				<h2 style="margin-bottom: 10px; opacity: .7;">Your order 📦 has been disputed for a refund</h2>
 				<h3 style="margin-bottom: 20px;">Dear ${data.user_name},</h3>
-				<p style="margin-bottom: 10px;">Your order (${data.order_unique_id}) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://computehaven.com/track/${data.tracking_number}">${data.tracking_number}</a> has
+				<p style="margin-bottom: 10px;">Your order (${data.order_unique_id}) with tracking number <a style="font-size: 15px; opacity: .7;" href="https://sledgedrip.com/track/${data.tracking_number}">${data.tracking_number}</a> has
 					successfully been disputed for a refund.</p>
 				
 				<h4 style="margin-bottom: 10px; opacity: .7">Contact Us</h4>
 				<p style="margin-bottom: 20px;">If you have any questions or need any assistance, please contact us at <a
-						href="mailto:info@computehaven.com" style="color: #223B6D;">customer support</a>. Our support
+						href="mailto:info@sledgedrip.com" style="color: #223B6D;">customer support</a>. Our support
 					team is always ready to
 					assist you.</p>
 			</div>
 			<footer style="padding: 20px; display: block; text-align: center;">
-				<a href="https://computehaven.com" target="_blank">
+				<a href="https://sledgedrip.com" target="_blank">
 					<img width="70" src="${bottom_logo}" alt="logo">
 					<p style="color: #3175D0;">SLEDGE DRIP</p>
 				</a>
 				<div style="margin: 15px 0px;">
 					<p style="margin-bottom: 15px;">You are receiving this email because you shopped at <a
-							href="computehaven.com">computehaven.com</a></p>
+							href="https://sledgedrip.com">sledgedrip.com</a></p>
 					<p style="margin-bottom: 15px;">Copyright &copy; ${copyright_year}, Sledge Drip, All rights
 						reserved.
 					</p>
