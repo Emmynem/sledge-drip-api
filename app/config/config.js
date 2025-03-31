@@ -1,8 +1,8 @@
 import crypto from 'crypto';
 import { v4 as uuidv4 } from 'uuid';
 
-export const primary_domain = "https://example.com";
-export const admin_domain = "https://commerce.q-ctrls.com";
+export const primary_domain = "https://sledgedrip.com";
+export const admin_domain = "https://commerce.sledgedrip.com";
 export const mailer_url = "https://api.mailer.xnyder.com";
 export const clouder_url = "https://api.clouder.xnyder.com";
 export const coinbase_payment_url = "https://api.commerce.coinbase.com/charges";
