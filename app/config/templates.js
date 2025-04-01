@@ -1,7 +1,8 @@
 import { return_all_orders_table, year_str } from "./config";
 
-const top_logo = "https://res.cloudinary.com/dydpyidi5/image/upload/v1733162504/logo/ctrtkvi1wbhnywvuo1oh.png";
-const bottom_logo = "https://res.cloudinary.com/dydpyidi5/image/upload/v1733162504/logo/ctrtkvi1wbhnywvuo1oh.png";
+const top_logo = "https://res.cloudinary.com/dabfoaprr/image/upload/v1743447790/sledge_hjqtxb.png";
+const bottom_logo = "https://res.cloudinary.com/dabfoaprr/image/upload/v1743447790/sledge_hjqtxb.png";
+// const bottom_logo = "https://res.cloudinary.com/dabfoaprr/image/upload/v1743447790/sledge-white_chyrte.png";
 
 const copyright_year = year_str();
 
