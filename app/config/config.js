@@ -294,7 +294,7 @@ export const transaction_types = { paid, withdrawal, deposit, refund, payment, r
 // End - Default Transaction Types
 
 // Default Currency
-export const currency = "USD"; // USD - Dollar
+export const currency = "NGN"; // NGN - Dollar
 // End - Default Currency
 
 export const app_defaults_data_type = ['STRING', 'INTEGER', 'BIGINT', 'BOOLEAN'];
@@ -654,8 +654,8 @@ export const validate_ratings = (rating) => {
 export const validate_payment_method = (obj) => {
 	const method = obj;
 	if (
-		// method !== payment_methods.card && 
-		// method !== payment_methods.wallet && 
+		method !== payment_methods.card && 
+		method !== payment_methods.wallet && 
 		// method !== payment_methods.transfer && 
 		method !== payment_methods.crypto && 
 		method !== payment_methods.paypal
@@ -666,8 +666,8 @@ export const validate_payment_method = (obj) => {
 export const validate_gateway = (obj) => {
 	const method = obj;
 	if (
-		// method !== gateways.paystack && 
-		// method !== gateways.squad && 
+		method !== gateways.paystack && 
+		method !== gateways.squad && 
 		// method !== gateways.internal && 
 		method !== gateways.coinbase && 
 		method !== gateways.wallets && 

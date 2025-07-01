@@ -162,7 +162,7 @@ export const transaction_rules = {
             .exists({ checkNull: true, checkFalsy: true })
             .bail()
             .custom(gateway => !!validate_gateway(gateway))
-            .withMessage(`Invalid gateway, accepts - ${gateways.paypal}`),
+            .withMessage(`Invalid gateway, accepts - (${gateways.squad}, ${gateways.paystack}, ${gateways.coinbase} and ${gateways.wallets})`),
     ],
     forFindingViaCurrency: [
         check('currency', "Currency is required")

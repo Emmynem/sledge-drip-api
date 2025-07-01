@@ -24,7 +24,7 @@ import bannersRoutes from "./routes/banners.routes.js";
 
 const app = express();
 
-const appWhitelist = [primary_domain, admin_domain, "http://localhost", "http://localhost:80", "http://localhost:3000", "http://localhost:5173"];
+const appWhitelist = [primary_domain, admin_domain, "http://localhost", "http://localhost:80", "http://localhost:3000", "http://localhost:5173", "https://sledgedrip.netlify.app"];
 //options for cors midddleware
 const options = cors.CorsOptions = {
 	allowedHeaders: [

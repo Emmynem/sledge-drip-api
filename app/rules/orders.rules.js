@@ -146,14 +146,14 @@ export const order_rules = {
             .isString().isLength({ min: 3, max: 20 })
             .withMessage("Invalid length (3 - 20) characters")
             .bail()
-            .custom(gateway => !!validate_gateway(gateway)).withMessage(`Invalid gateway, accepts - (${gateways.paypal})`),
+            .custom(gateway => !!validate_gateway(gateway)).withMessage(`Invalid gateway, accepts - (${gateways.squad}, ${gateways.paystack}, ${gateways.coinbase} and ${gateways.wallets})`),
         check('payment_method', "Payment Method is required")
             .exists({ checkNull: true, checkFalsy: true })
             .bail()
             .isString().isLength({ min: 3, max: 20 })
             .withMessage("Invalid length (3 - 20) characters")
             .bail()
-            .custom(payment_method => !!validate_payment_method(payment_method)).withMessage(`Invalid payment method, accepted methods (${payment_methods.paypal})`),
+            .custom(payment_method => !!validate_payment_method(payment_method)).withMessage(`Invalid payment method, accepted methods (${payment_methods.card}, ${payment_methods.crypto} and ${payment_methods.wallet})`),
         check('contact_fullname', "Contact Fullname is required")
             .exists({ checkNull: true, checkFalsy: true })
             .bail()
