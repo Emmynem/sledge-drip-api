@@ -40,9 +40,11 @@ export default function (app) {
 	
 	app.post("/user/order/dispute", [order_rules.forFindingOrder, order_rules.forDisputingRefund], disputeOrderForRefund);
 
+	app.put("/order/pay", [checks.verifyKey, checks.isInternalKey, order_rules.forFindingOrdersViaTrackingNumber], updateOrderPaid);
 	app.put("/user/order/pay", [checks.verifyKey, checks.isInternalKey, checks.verifyToken, checks.isUser, order_rules.forFindingOrdersViaTrackingNumber], updateOrderPaid);
 	app.put("/root/user/order/pay", [checks.verifyKey, checks.isRootKey, order_rules.forFindingOrdersViaTrackingNumber], updateOrderPaid);
 
+	app.put("/order/cancel", [checks.verifyKey, checks.isInternalKey, order_rules.forFindingOrdersViaTrackingNumber], updateOrderCancelled);
 	app.put("/user/order/cancel", [checks.verifyKey, checks.isInternalKey, checks.verifyToken, checks.isUser, order_rules.forFindingOrdersViaTrackingNumber], updateOrderCancelled);
 	app.put("/root/user/order/cancel", [checks.verifyKey, checks.isRootKey, order_rules.forFindingOrdersViaTrackingNumber], updateOrderCancelled);
 	
